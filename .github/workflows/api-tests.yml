@@ -24,10 +24,10 @@ jobs:
     - name: Install Newman
       run: |
         npm install -g newman
-        npm install -g newman-reporter-htmlextra 
+        npm install -g newman-reporter-htmlextra
     - name: Run Postman Tests with Newman 
       run: | 
-        newman run postman/Dovydas-Simple-Spring-Boot-API-Testing.postman_collection.json \ 
+        newman run postman/Dovydas-Simple-Spring-Boot-API-Testing.postman_collection.json \
         -r htmlextra --reporter-htmlextra-export newman-report.html
     - name: Upload Test Report
       uses: actions/upload-artifact@v4
